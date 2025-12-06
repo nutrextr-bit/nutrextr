@@ -1,6 +1,8 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import PrimaryButton from "@/components/ui/primary-button"
+import SecondaryButton from "@/components/ui/secondary-button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import { CheckCircle2, Heart, Zap, Users, Leaf, Shield, Sparkles } from "lucide-react"
@@ -34,18 +36,12 @@ export default function HomePage() {
 
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link href="/contact">
-                    <Button size="lg" className="bg-[#e60000] hover:bg-[#cc0000] text-white px-8 h-12">
+                      <PrimaryButton size="sm">
                       Join the Waitlist
-                    </Button>
+                    </PrimaryButton>
                   </Link>
                   <Link href="/test">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-[#e60000] text-[#e60000] hover:bg-red-50 px-8 h-12 bg-transparent"
-                    >
-                      Take the Anemia Test
-                    </Button>
+                    <SecondaryButton size="sm">Take the Anemia Test</SecondaryButton>
                   </Link>
                 </div>
 
@@ -369,29 +365,25 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-[#e60000] text-white">
+        <section className="py-20 bg-white text-black">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto space-y-6">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance font-[family-name:var(--font-quicksand)]">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance font-[family-name:var(--font-quicksand)] text-black">
                 Be the first to try India's cleanest iron jellies
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed text-pretty">
+              <p className="text-lg text-black/80 leading-relaxed text-pretty">
                 Join the waitlist & take your free anemia self-check test today.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row justify-center pt-4">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-white text-[#e60000] hover:bg-gray-100 px-8 h-12">
+                    <PrimaryButton size="sm">
                     Join the Waitlist
-                  </Button>
+                  </PrimaryButton>
                 </Link>
                 <Link href="/test">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10 px-8 h-12 bg-transparent"
-                  >
+                  <SecondaryButton size="sm" className="border-black text-black bg-transparent">
                     Take the Test
-                  </Button>
+                  </SecondaryButton>
                 </Link>
               </div>
             </div>
