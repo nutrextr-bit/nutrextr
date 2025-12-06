@@ -5,7 +5,7 @@ import PrimaryButton from "@/components/ui/primary-button"
 import SecondaryButton from "@/components/ui/secondary-button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
-import { CheckCircle2, Heart, Zap, Users, Leaf, Shield, Sparkles } from "lucide-react"
+import { CheckCircle2, Heart, Zap, Users, Leaf, Shield, Sparkles,Vegan } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -152,7 +152,7 @@ export default function HomePage() {
                   desc: "Beetroot, spinach, and pomegranate",
                 },
                 {
-                  icon: Leaf,
+                  icon: Vegan,
                   title: "100% Plant-Based",
                   desc: "Clean ingredients, no chemicals or preservatives",
                 },
