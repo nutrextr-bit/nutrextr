@@ -29,9 +29,7 @@ export default function HomePage() {
                   <p className="text-lg text-muted-foreground leading-relaxed text-pretty max-w-2xl">
                     No tablets. No tonics. Just delicious jellies that fight iron deficiency naturally.
                   </p>
-                  <p className="text-base text-[#e60000] font-medium leading-relaxed text-pretty max-w-2xl">
-                    🎉 Join our waitlist for early access and win a free sample!
-                  </p>
+
                 </div>
 
                 <div className="flex flex-col gap-4 sm:flex-row">

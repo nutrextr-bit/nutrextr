@@ -7,7 +7,10 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-[#e60000] font-[family-name:var(--font-quicksand)]">Nutrextr</h3>
+            <div className="flex items-center ">
+                <img src="/logo.svg" alt="Nutrextr logo" className="h-50 w-50" />
+              {/* <h3 className="text-2xl font-bold text-[#e60000] font-[family-name:var(--font-quicksand)]">Nutrextr</h3> */}
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Iron-rich jellies for healthy hemoglobin levels. Convenient, effective, and delicious.
             </p>
