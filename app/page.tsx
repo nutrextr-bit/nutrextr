@@ -14,7 +14,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-white to-red-50 py-20 md:py-32">
+        <section className="relative overflow-hidden bg-white py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
               <div className="space-y-8">
@@ -39,11 +39,12 @@ export default function HomePage() {
                     </PrimaryButton>
                   </Link>
                   <Link href="/test">
-                    <SecondaryButton size="sm">Take the Anemia Test</SecondaryButton>
+                      <Button variant="outline" className="rounded-full border-2 border-[#e60000] text-[#e60000] px-8 py-6 text-xl h-auto hover:bg-red-50 shadow-none">
+                        Take the Anemia Test
+                      </Button>
                   </Link>
                 </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-red-100">
+                <div className="bg-white p-6 rounded-xl border-2 border-[#e60000]">
                   <p className="text-sm font-medium text-muted-foreground mb-3">
                     Curious if you need more iron? Take a simple test to know your status.
                   </p>
@@ -340,16 +341,28 @@ export default function HomePage() {
                   A passionate team driven by science, empathy, and innovation.
                 </p>
 
-                <div className="grid gap-6 md:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
                   {[
-                    { name: "Viswapriya V", role: "Founder & Research Lead" },
-                    { name: "Jayashree V", role: "Director" },
-                    { name: "Shantanu G", role: "Web Developer" },
+                    { 
+                      name: "Viswapriya V", 
+                      role: "Founder & Research Lead",
+                      image: "/images/directors/viswapriya.jpg"
+                    },
+                    { 
+                      name: "Jayashree V", 
+                      role: "Director",
+                      image: "/images/directors/jayashree.jpg"
+                    },
+                    // { name: "Shantanu G", role: "Web Developer" },
                   ].map((member, idx) => (
                     <Card key={idx} className="border-2 hover:border-[#e60000] transition-colors">
                       <CardContent className="p-6 text-center space-y-2">
-                        <div className="w-20 h-20 rounded-full bg-red-100 mx-auto mb-4 flex items-center justify-center">
-                          <Users className="w-10 h-10 text-[#e60000]" />
+                        <div className="w-24 h-24 rounded-full bg-red-100 mx-auto mb-4 overflow-hidden border-2 border-red-100">
+                          <img 
+                            src={member.image} 
+                            alt={member.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <h3 className="text-xl font-semibold">{member.name}</h3>
                         <p className="text-sm text-muted-foreground">{member.role}</p>
@@ -379,9 +392,9 @@ export default function HomePage() {
                   </PrimaryButton>
                 </Link>
                 <Link href="/test">
-                  <SecondaryButton size="sm" className="border-black text-black bg-transparent">
+                  <Button variant="outline" className="rounded-full border-2 border-black text-black px-8 sm:px-10 py-4 sm:py-5 text-xl sm:text-2xl h-auto hover:bg-gray-50 shadow-none font-bold">
                     Take the Test
-                  </SecondaryButton>
+                  </Button>
                 </Link>
               </div>
             </div>
